@@ -1,5 +1,5 @@
 # webPersonnel
-webPersonnel built with bootstrap\n<br>
+webPersonnel built with bootstrap<br>
 Attention: it has not been well adaptive in mobile !
 
 
