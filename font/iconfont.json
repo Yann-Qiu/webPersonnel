@@ -1,0 +1,114 @@
+{
+  "id": "1724819",
+  "name": "cv",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "3580009",
+      "name": "icons8-parse_resume",
+      "font_class": "icons-parse_resume",
+      "unicode": "f1ea",
+      "unicode_decimal": 61930
+    },
+    {
+      "icon_id": "5921259",
+      "name": "education",
+      "font_class": "education",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
+    {
+      "icon_id": "6216337",
+      "name": "简历",
+      "font_class": "jianli",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "6639623",
+      "name": "earphone",
+      "font_class": "earphone",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "7275407",
+      "name": "Social",
+      "font_class": "Social",
+      "unicode": "e69a",
+      "unicode_decimal": 59034
+    },
+    {
+      "icon_id": "7334992",
+      "name": "github",
+      "font_class": "git",
+      "unicode": "e64a",
+      "unicode_decimal": 58954
+    },
+    {
+      "icon_id": "7773567",
+      "name": "user",
+      "font_class": "icon-username",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "12255116",
+      "name": "185078 - email mail streamline",
+      "font_class": "email",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "12275049",
+      "name": "project selection",
+      "font_class": "projectselection",
+      "unicode": "e728",
+      "unicode_decimal": 59176
+    },
+    {
+      "icon_id": "12385830",
+      "name": "home",
+      "font_class": "shouye",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "13462772",
+      "name": "linkedin",
+      "font_class": "linkedin",
+      "unicode": "e73d",
+      "unicode_decimal": 59197
+    },
+    {
+      "icon_id": "13542072",
+      "name": "game",
+      "font_class": "youxi",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "13599196",
+      "name": "stream list",
+      "font_class": "streamlist-copy",
+      "unicode": "ea79",
+      "unicode_decimal": 60025
+    },
+    {
+      "icon_id": "13707110",
+      "name": "lamp",
+      "font_class": "lamp",
+      "unicode": "e65c",
+      "unicode_decimal": 58972
+    },
+    {
+      "icon_id": "13739271",
+      "name": "reactjs",
+      "font_class": "reactjs",
+      "unicode": "e6c2",
+      "unicode_decimal": 59074
+    }
+  ]
+}
