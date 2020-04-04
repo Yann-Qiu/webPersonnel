@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "3957268",
+      "name": "Add to download",
+      "font_class": "Addtodownload",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
       "icon_id": "3580009",
       "name": "icons8-parse_resume",
       "font_class": "icons-parse_resume",

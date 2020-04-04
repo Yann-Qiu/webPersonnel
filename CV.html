@@ -7,25 +7,29 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	    <title></title>
 
-	        <!-- CSS -->
-	        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
-	        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-			<link rel="stylesheet" href="./style.css">
-			<link rel="stylesheet" href="./font/iconfont.css">
-	        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	        <!--[if lt IE 9]>
-	            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-	            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-	        <![endif]-->
-
-	        <!-- Favicon and touch icons -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+		<link rel="stylesheet" href="./style.css">
+		<link rel="stylesheet" href="./font/iconfont.css">
 
     </head>
 
     <body>
-	
+		<div class="modal fade permission" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+          <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+            	<div class="modal-header">
+	          		Attention:
+	          	</div>
+	          	<div class="modal-body">
+              		Sorry, in order to protect the copyright of the developer, I have no permission to export this.
+            	</div>
+            </div>
+          </div>
+        </div>
+		
+
 		<div class="container-fluid">
 			<div class="row">
 				<nav class="navbar visible-xs-block">
@@ -33,17 +37,20 @@
 			        	<div class="navbar-header">
 			          		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 			           			<span class="sr-only">Toggle navigation</span>
-			            		<span class="icon-bar"></span>
-			            		<span class="icon-bar"></span>
-			            		<span class="icon-bar"></span>
+			            		<span class="icon-bar" style="background-color: #fff;"></span>
+			            		<span class="icon-bar" style="background-color: #fff;"></span>
+			            		<span class="icon-bar" style="background-color: #fff;"></span>
 			          		</button>
-			          		<a class="navbar-brand" href="#">Project name</a>
+			          		<a class="navbar-brand" href="#">Yanfeng Qiu's web</a>
 			        	</div>
 			        <div id="navbar" class="collapse navbar-collapse">
 			          	<ul class="nav navbar-nav">
-			            	<li class="active"><a href="#">Home</a></li>
-			            	<li><a href="#about">About</a></li>
-			            	<li><a href="#contact">Contact</a></li>
+			            	<li class="active"><a href="homeContent"><span class="iconfont" style="margin-right: 10px;">&#xe604;</span>Home</a></li>
+			            	<li><a href="#aboutContent"><span class="iconfont" style="margin-right: 10px;">&#xe600;</span>About</a></li>
+			            	<li><a href="#skillContent"><span class="iconfont" style="margin-right: 10px;">&#xe65c;</span>Skills</a></li>
+			            	<li><a href="#socialContent"><span class="iconfont" style="margin-right: 10px;">&#xe69a;</span>Social</a></li>
+			            	<li><a href="#educaContent"><span class="iconfont" style="margin-right: 10px;">&#xe634;</span>Education</a></li>
+			            	<li><a href="#projectContent"><span class="iconfont" style="margin-right: 10px;">&#xe728;</span>Project</a></li>
 			          	</ul>
 			        </div><!--/.nav-collapse -->
 			      </div>
@@ -56,29 +63,33 @@
 							<div class="poste"><em>Student</em></div>
 						</div>
 						<nav calss="navbar">
-							<div class="nav-item active"><span class="iconfont" style="margin-right: 10px;">&#xe604;</span>Home</div>
-							<div class="nav-item"><span class="iconfont" style="margin-right: 10px;">&#xe600;</span>About</div>
-							<div class="nav-item"><span class="iconfont" style="margin-right: 10px;">&#xe65c;</span>Skills</div>
-							<div class="nav-item"><span class="iconfont" style="margin-right: 10px;">&#xe69a;</span>Social</div>
-							<div class="nav-item"><span class="iconfont" style="margin-right: 10px;">&#xe634;</span>Education</div>
-							<div class="nav-item"><span class="iconfont" style="margin-right: 10px;">&#xe728;</span>Project</div>
+							<div class="nav-item active" id="home"><span class="iconfont" style="margin-right: 10px;">&#xe604;</span>Home</div>
+							<div class="nav-item" id="about"><span class="iconfont" style="margin-right: 10px;">&#xe600;</span>About</div>
+							<div class="nav-item" id="skill"><span class="iconfont" style="margin-right: 10px;">&#xe65c;</span>Skills</div>
+							<div class="nav-item" id="socail"><span class="iconfont" style="margin-right: 10px;">&#xe69a;</span>Social</div>
+							<div class="nav-item" id="educa"><span class="iconfont" style="margin-right: 10px;">&#xe634;</span>Education</div>
+							<div class="nav-item" id="project"><span class="iconfont" style="margin-right: 10px;">&#xe728;</span>Project</div>
 						</nav>
 					</div>
 				</div>
+			</div>
+		</div>
+		<div class="container" id="homeContent">
+			<div class="row">
 				<div class="col-md-8 col-md-offset-3 col-sm-7 col-sm-offset-4 text">
 					<div class="detail2">
 						<div class="content2">
-							<div class="row">
-								<span class="col-md-2 content2-item hello1">
+							<div class="row clearfloat">
+								<div class="col-md-2 content2-item hello1">
 									I'm 
-								</span>
+								</div>
 							</div>
-							<div class="row">
-								<span class="col-md-6 content2-item hello2">
+							<div class="row clearfloat">
+								<div class="col-md-6 content2-item hello2">
 									Yanfeng
-								</span>
+								</div>
 							</div>
-							<div class="row">
+							<div class="row clearfloat">
 								<div class="col-md-12 content2-item intro col-sm-12">
 									<p style="font-size: 16px;">
 										Student of the U.T.T(in France), devoted to web developpemnt. Expect to be a front Enginner.<br>
@@ -86,59 +97,82 @@
 									</p>
 								</div>
 							</div>
-							<div class="row">
+							<div class="row clearfloat">
 								<div class="col-md-3 content2-item action col-sm-12">
-									<button class="btn  btn-lg" style="margin-right: 30px;border-radius: 30px;background-color: #FF5959;">
+									<a class="btn  btn-lg" style="margin-right: 30px;border-radius: 30px;background-color: #FF5959; color:#fff" href="#aboutContent" id='btnMore'>
 										<span class="iconfont" style="margin-right: 10px;">&#xe728;</span>More
-									</button>
+									</a>
 								</div>
 								<div class="col-md-6 content2-item action col-sm-12">
-									<a href="mailto:yanfeng.qiu@utt.fr" class="btn  btn-lg"style="color:#fff;border-radius: 30px;border:1px solid #fff;background-color: rgba(1,1,1,0);">
+									<a href="mailto:yanfeng.qiu@utt.fr" class="btn  btn-lg"style="color:#fff;border-radius: 30px;border:1px solid #fff;background-color: rgba(1,1,1,0);" id="btnMail">
 										<span class="iconfont" style="margin-right: 10px;">&#xe602;</span>Contant me
 									</a>
 								</div>
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container" id="aboutContent">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-3 col-sm-8 col-sm-offset-4 text">
 					<div class="detail3">
 						<div class="content3">
-							<div class="row" style="margin-bottom: 70px;">
+							<div class="row clearfloat" style="margin-bottom: 70px;">
 								<div class="col-md-5 headline col-sm-12"><h3><strong>About Me</strong></h3></div>
 							</div>
-							<div class="row">
+							<div class="row clearfloat">
 								<div class="col-md-3 col-sm-12">
 									<img src="./img/photo.png" alt="" class="img-circle" style="width: 140px;height: 185px;">
 								</div>
 								<div class="col-md-9 col-sm-12">
 									<div class="row"><div class="col-md-2 col-sm-12" style="font-size: 30px;font-weight: 700; color: black;display: inline-block;">Hello,</div></div>
-									<div class="row" style="margin-top: 25px;">
-										<div class="col-md-12 col-sm-12" style="display: inline-block;">
+									<div class="row clearfloat" style="margin-top: 25px;">
+										<div class="col-md-11 col-sm-12" style="display: inline-block;">
 											<p class="text">
 												I am Yanfeng Qiu, Chinese student from Troyes, France. I have rich interest in web site design and website developpment, also I am curious to learn new technology.
 											</p>
 										</div>
 									</div>
-									<div class="row text" style="margin-top: 25px;">
+									<div class="row text clearfloat" style="margin-top: 25px;">
 										<div class="col-md-6 col-sm-12" style="display: inline-block;">Name: <span style="color:black">Yanfeng Qiu</span></div>
 										<div class="col-md-6 col-sm-12" style="display: inline-block;">Location: <span style="color:black">76 rue du 8 mai 1945, Troyes</span></div>
 									</div>
-									<div class="row text" style="margin-top: 15px;">
+									<div class="row text clearfloat" style="margin-top: 15px;">
 										<div class="col-md-6 col-sm-12" style="display: inline-block;">Birthday: <span style="color:black">28 Decembre, 1997</span></div>
 										<div class="col-md-6 col-sm-12" style="display: inline-block;">Email: <span style="color:black">yanfeng.qiu@utt.fr</span></div>
 									</div>
 								</div>
 							</div>
-						</div>
-						
+							<div class="row clearfloat" style="margin-top:20px;">
+								<div class="col-md-6 content2-item action col-sm-12" style="text-align: center; align-items: center;">
+									<a class="btn  btn-lg" style="margin-right: 30px;border-radius: 30px;background-color: #FF5959; color:#fff" id="CVFR">
+										<span class="iconfont" style="margin-right: 10px;">&#xe615;</span>Download CV(Fr.)
+									</a>
+								</div>
+								<div class="col-md-6 content2-item action col-sm-12" style="text-align: center; align-items: center;">
+									<a class="btn  btn-lg"style="color:#ccc;border-radius: 30px;border:1px solid #ccc;background-color: transparent" id="CVCH">
+										<span class="iconfont" style="margin-right: 10px;">&#xe615;</span>Download CV(Ch.)
+									</a>
+								</div>
+							</div>
+						</div>	
 					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container" id="skillContent">
+			<div class="row clearfloat">
+				<div class="col-md-8 col-md-offset-3 col-sm-7 col-sm-offset-4 text">
 					<div class="detail4">
 						<div class="content4">
-							<div class="row" style="margin-bottom: 50px;">
+							<div class="row clearfloat" style="margin-bottom: 50px;">
 								<div class="col-md-12 headline">
 									<h3><strong>My Skils</strong></h3>
 								</div>
 							</div>
-							<div class="row" style="margin-bottom: 30px;">
+							<div class="row clearfloat" style="margin-bottom: 30px;">
 								<div class="col-md-12">
 									<p class="text">
 										Html&Css, Js/Jquery, Framework React+Redux+Router, Bootstrap, PHP, Java, Python, C++, C.
@@ -146,7 +180,7 @@
 									</p>
 								</div>
 							</div>
-							<div class="row">
+							<div class="row clearfloat">
 								<div class="col-md-6">
 									<p style="text-transform: uppercase;font-weight: 700;margin-bottom: 15px; color:black">Html&Css</p>
 									<div class="progress">
@@ -162,7 +196,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="row">
+							<div class="row clearfloat">
 								<div class="col-md-6">
 									<p style="text-transform: uppercase;font-weight: 700;margin-bottom: 15px; color:black">React + Redux</p>
 									<div class="progress">
@@ -180,140 +214,163 @@
 							</div>
 						</div>
 					</div>
-					<div class="detail5">
-						<div class="content5">
-							<div class="row text-center">
-								<div class="col-md-4">
-									<div class="row" >
-										<span class="iconfont" style="font-size: 60px;">&#xe64a;</span>
+				</div>
+			</div>
+			<div class="container" id="socialContent">
+				<div class="row clearfloat">
+					<div class="col-md-8 col-md-offset-3 col-sm-7 col-sm-offset-4 text">
+						<div class="detail5">
+							<div class="content5">
+								<div class="row text-center clearfloat">
+									<div class="col-md-4 col-xs-12 website" style="padding:30px;">
+										<a href="https://github.com/qs4091" target="_blank" style="text-decoration: none;">
+											<div class="row clearfloat" >
+												<span class="iconfont" style="font-size: 60px;color:#fff;">&#xe64a;</span>
+											</div>
+											<button class="btn btn-lg" style="color: white; margin-top: 30px; border: 1px solid #fff; background-color: rgba(1,1,1,0);">
+												Github
+											</button>
+										</a>
 									</div>
-									<a href="https://github.com/qs4091" target="_blank" class="btn btn-lg" style="color: white; margin-top: 30px; border: 1px solid #fff; background-color: rgba(1,1,1,0);">
-										Github
-									</a>
-								</div>
-								<div class="col-md-4">
-									<div class="row" >
-										<span class="iconfont" style="font-size: 60px;">&#xe73d;</span>
+									<div class="col-md-4 col-xs-12 website" style="padding:30px;">
+										<a href="https://www.linkedin.com/in/yanfeng-qiu-3404741a3/" target="_blank" style="text-decoration: none;">
+											<div class="row clearfloat" >
+												<span class="iconfont" style="font-size: 60px;color:#fff;">&#xe73d;</span>
+											</div>
+											<button class="btn btn-lg" style="color: white; margin-top: 30px; border: 1px solid #fff; background-color: rgba(1,1,1,0);">
+												Linkedin
+											</button>
+										</a>
 									</div>
-									<a href="https://www.linkedin.com/in/yanfeng-qiu-3404741a3/" target="_blank" class="btn btn-lg" style="color: white; margin-top: 30px; border: 1px solid #fff; background-color: rgba(1,1,1,0);">
-										Linkedin
-									</a>
-								</div>
-								<div class="col-md-4">
-									<div class="row" >
-										<span class="iconfont" style="font-size: 60px;">&#xe728;</span>
+									<div class="col-md-4 col-xs-12 website " style="padding:30px;">
+										<a  style="text-decoration: none;" href="#projectContent">
+											<div class="row clearfloat" >
+												<span class="iconfont" style="font-size: 60px;color:#fff;">&#xe728;</span>
+											</div>
+											<button class="btn btn-lg" style="color: white; margin-top: 30px; border: 1px solid #fff; background-color: rgba(1,1,1,0);">
+												Projet Finished
+											</button>
+										</a>
 									</div>
-									<a class="btn btn-lg" style="color: white; margin-top: 30px; border: 1px solid #fff; background-color: rgba(1,1,1,0);">
-										Projet Finished
-									</a>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="detail7">
-						<div class="content7 display-center">
-							<div class="row" style="margin-bottom: 50px;">
-								<div class="col-md-12 headline">
-									<h3><strong>Education experience</strong></h3>
+				</div>
+			</div>
+			<div class="container" id="educaContent">
+				<div class="row clearfloat">
+					<div class="col-md-8 col-md-offset-3 col-sm-7 col-sm-offset-4 text">
+						<div class="detail7">
+							<div class="content7 display-center">
+								<div class="row clearfloat" style="margin-bottom: 50px;">
+									<div class="col-md-12 headline">
+										<h3><strong>Education experience</strong></h3>
+									</div>
 								</div>
-							</div>
-							<span class="timeline-line"></span>
-							<div class="row text">
-								<div class="col-md-2 time">2019.9-now</div>
-								<div class="col-md-8 col-md-offset-1"><p style="font-size: 18px;font-weight: 700;margin-bottom: 15px;">Engineer Diploma(master)</p><em>L'Université de Technologie de Troyes, France</em></div>
-							</div>
-							<div class="row text" style="margin-top: 50px">
-								<div class="col-md-2 time">2016.9-2019.6</div>
-								<div class="col-md-8 col-md-offset-1"><p style="font-size: 18px;font-weight: 700;margin-bottom: 15px;">Bachelor's Degree</p><em>U.T.S.E.U.S. of Shanghai University, Shanghai</em></div>
-							</div>
-							<div class="row text" style="margin-top: 50px">
-								<div class="col-md-2 time">2016.6</div>
-								<div class="col-md-8 col-md-offset-1"><p style="font-size: 18px;font-weight: 700;margin-bottom: 15px;">Gaokao</p><em>Huamei Experimental School, Guangdong</em></div>
+								<span class="timeline-line visible-lg-block"></span>
+								<div class="row text clearfloat">
+									<div class="col-md-3 time">2019.9-now</div>
+									<div class="col-md-8 col-md-offset-1"><p style="font-size: 18px;font-weight: 700;margin-bottom: 15px;">Engineer Diploma(master)</p><em>L'Université de Technologie de Troyes, France</em></div>
+								</div>
+								<div class="row text clearfloat" style="margin-top: 50px">
+									<div class="col-md-3 time">2016.9-2019.6</div>
+									<div class="col-md-8 col-md-offset-1"><p style="font-size: 18px;font-weight: 700;margin-bottom: 15px;">Bachelor's Degree</p><em>U.T.S.E.U.S. of Shanghai University, Shanghai</em></div>
+								</div>
+								<div class="row text clearfloat" style="margin-top: 50px">
+									<div class="col-md-3 time">2016.6</div>
+									<div class="col-md-8 col-md-offset-1"><p style="font-size: 18px;font-weight: 700;margin-bottom: 15px;">Gaokao</p><em>Huamei Experimental School, Guangdong</em></div>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="detail6">
-						<div class="content6">
-							<div class="row" style="margin-bottom: 50px;">
-								<div class="col-md-12 headline" >
-									<h3><strong>Course and personal projects</strong></h3>
+				</div>
+			</div>
+			<div class="container" id="projectContent">
+				<div class="row clearfloat">
+					<div class="col-md-8 col-md-offset-3 col-sm-7 col-sm-offset-4 text">
+						<div class="detail6">
+							<div class="content6">
+								<div class="row" style="margin-bottom: 50px;">
+									<div class="col-md-12 headline" >
+										<h3><strong>Course and personal projects</strong></h3>
+									</div>
 								</div>
-							</div>
-							<div class="row">
-							  	<div class="col-xs-12 col-md-4">						
-							    	<div class="thumbnail text-center card">							    	
-							      		<div class="caption">
-							      			<span class="iconfont" style="font-size: 40px;color: #FF5959;">&#xe6c2;</span>
-							        		<h3 class="text-center projet-title">Website Jianshu</h3>
-							        		<p class="text">a website built with framework Reacjs+Redux+Router</p>
-							        		<p class="text-center"><a href="https://github.com/qs4091/jianshu_React_Redux" class="btn btn-primary" role="button">Learn more</a></p>
-							      		</div>
-							    	</div>
-							  	</div>
-							  	<div class="col-xs-12 col-md-4">
-							    	<div class="thumbnail text-center card">
-							      		<div class="caption">
-							      			<span class="iconfont" style="font-size: 40px;color: #FF5959;">&#xe601;</span>
-							        		<h3 class="projet-title text-center">Website for English listenig</h3>
-							        		<p class="text">a website built with framework Reacjs+Router</p>
-							        		<p class="text-center"><a href="https://github.com/qs4091/Projet_Reactjs" class="btn btn-primary" role="button">Learn more</a></p>
-							      		</div>
-							    	</div>
-							  	</div>
-							  	<div class="col-xs-12 col-md-4">
-							    	<div class="thumbnail text-center card">
-							      		<div class="caption">
-							      			<span class="iconfont" style="font-size: 40px;color: #FF5959;">&#xe603;</span>
-							        		<h3 class="projet-title text-center">WebCV</h3>
-							        		<p class="text">a website built with Html+Css+JQuery</p>
-							        		<p class="text-center"><a href="https://github.com/qs4091/webCV" class="btn btn-primary" role="button">Learn more</a></p>
-							      		</div>
-							    	</div>
-							  	</div>
-							</div>
-							<div class="row">
-							  	<div class="col-xs-12 col-md-4">
-							    	<div class="thumbnail text-center card">
-							      		<div class="caption">
-							      			<span class="iconfont" style="font-size: 40px;color: #FF5959;">&#xea79;</span>
-							        		<h3 class="projet-title text-center">ToDoList</h3>
-							        		<p class="text">a little tool built with Reactjs+Redux</p>
-							        		<p class="text-center"><a href="https://github.com/qs4091/toDoList_React_Redux" class="btn btn-primary" role="button">Learn more</a></p>
-							      		</div>
-							    	</div>
-							  	</div>
-							  	<div class="col-xs-12 col-md-4">
-							    	<div class="thumbnail text-center card">
-							      		<div class="caption">
-							      			<span class="iconfont" style="font-size: 40px;color: #FF5959;">&#xe602;</span>
-							        		<h3 class="projet-title text-center">MailParser</h3>
-							        		<p class="text">a tool of commande line written by JS/NodeJS</p>
-							        		<p class="text-center"><a href="https://sourceforge.net/projects/elitedelefrance-gl02/" class="btn btn-primary" role="button">Learn more</a></p>
-							      		</div>
-							    	</div>
-							  	</div>
-							  	<div class="col-xs-12 col-md-4">
-							    	<div class="thumbnail text-center card">
-							      		<div class="caption">
-							      			<span class="iconfont" style="font-size: 40px;color: #FF5959;">&#xe605;</span>
-							        		<h3 class="projet-title text-center">Jest</h3>
-							        		<p class="text">a little card game written by JAVA</p>
-							        		<p class="text-center"><a href="#" class="btn btn-primary" role="button">Learn more</a></p>
-							      		</div>
-							    	</div>
-							  	</div>
+								<div class="row clearfloat">
+								  	<div class="col-xs-12 col-md-4">						
+								    	<div class="thumbnail text-center card">							    	
+								      		<div class="caption">
+								      			<span class="iconfont" style="font-size: 40px;color: #FF5959;">&#xe6c2;</span>
+								        		<h3 class="text-center projet-title">Website Jianshu</h3>
+								        		<p class="text">a website built with framework Reacjs+Redux+Router</p>
+								        		<p class="text-center"><a target="_blank" href="https://github.com/qs4091/jianshu_React_Redux" class="btn btn-primary" role="button">Learn more</a></p>
+								      		</div>
+								    	</div>
+								  	</div>
+								  	<div class="col-xs-12 col-md-4">
+								    	<div class="thumbnail text-center card">
+								      		<div class="caption">
+								      			<span class="iconfont" style="font-size: 40px;color: #FF5959;">&#xe601;</span>
+								        		<h3 class="projet-title text-center">Website for English listenig</h3>
+								        		<p class="text">a website built with framework Reacjs+Router</p>
+								        		<p class="text-center"><a target="_blank" href="https://github.com/qs4091/Projet_Reactjs" class="btn btn-primary" role="button">Learn more</a></p>
+								      		</div>
+								    	</div>
+								  	</div>
+								  	<div class="col-xs-12 col-md-4">
+								    	<div class="thumbnail text-center card">
+								      		<div class="caption">
+								      			<span class="iconfont" style="font-size: 40px;color: #FF5959;">&#xe603;</span>
+								        		<h3 class="projet-title text-center">WebCV</h3>
+								        		<p class="text">a website built with Html+Css+JQuery</p>
+								        		<p class="text-center"><a target="_blank" href="https://github.com/qs4091/webCV" class="btn btn-primary" role="button">Learn more</a></p>
+								      		</div>
+								    	</div>
+								  	</div>
+								</div>
+								<div class="row clearfloat">
+								  	<div class="col-xs-12 col-md-4">
+								    	<div class="thumbnail text-center card">
+								      		<div class="caption">
+								      			<span class="iconfont" style="font-size: 40px;color: #FF5959;">&#xea79;</span>
+								        		<h3 class="projet-title text-center">ToDoList</h3>
+								        		<p class="text">a little tool built with Reactjs+Redux</p>
+								        		<p class="text-center"><a target="_blank" href="https://github.com/qs4091/toDoList_React_Redux" class="btn btn-primary" role="button">Learn more</a></p>
+								      		</div>
+								    	</div>
+								  	</div>
+								  	<div class="col-xs-12 col-md-4">
+								    	<div class="thumbnail text-center card">
+								      		<div class="caption">
+								      			<span class="iconfont" style="font-size: 40px;color: #FF5959;">&#xe602;</span>
+								        		<h3 class="projet-title text-center">MailParser</h3>
+								        		<p class="text">a tool of commande line written by JS/NodeJS</p>
+								        		<p class="text-center"><a target="_blank" href="https://sourceforge.net/projects/elitedelefrance-gl02/" class="btn btn-primary" role="button">Learn more</a></p>
+								      		</div>
+								    	</div>
+								  	</div>
+								  	<div class="col-xs-12 col-md-4">
+								    	<div class="thumbnail text-center card">
+								      		<div class="caption">
+								      			<span class="iconfont" style="font-size: 40px;color: #FF5959;">&#xe605;</span>
+								        		<h3 class="projet-title text-center">Jest</h3>
+								        		<p class="text">a little card game written by JAVA</p>
+								        		<p class="text-center"><button href="#" class="btn btn-primary" data-toggle="modal" data-target=".permission" role="button">No Perssion</button></p>
+								      		</div>
+								    	</div>
+								  	</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		
 
 		<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
 	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+		<script type="text/javascript" src="./action.js"></script>
 	    <script async defer src="https://buttons.github.io/buttons.js"></script>
-
-	    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
     </body>
 </html>
