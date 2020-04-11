@@ -6,7 +6,7 @@ jQuery(document).ready(function() {
 	}
 
 	window.onload = function(){
-		var Top = $(document.documentElement).scrollTop();
+		var Top = $(document.documentElement).scrollTop() || $(document.body).scrollTop();
 
 		if(Top >= 0 && Top <=700){
 			setActive("#home");
@@ -27,27 +27,32 @@ jQuery(document).ready(function() {
 			setActive("#project");
 		}
 	}
+	
+	let timer = null;
 	window.onscroll = function(){
-		var Top = $(document.documentElement).scrollTop();
+		clearTimeout(timer);
+		timer = setTimeout(function(){
+			var Top = $(document.documentElement).scrollTop() || $(document.body).scrollTop();
 
-		if(Top >= 0 && Top <=700){
-			setActive("#home");
-		}
-		if(Top >= 700 && Top <=1200){
-			setActive("#about");
-		}
-		if(Top >= 1200 && Top <=1750){
-			setActive("#skill");
-		}
-		if(Top >= 1750 && Top <=2000){
-			setActive("#socail");
-		}
-		if(Top >= 2000 && Top <=2600){
-			setActive("#educa");
-		}
-		if(Top >= 2600){
-			setActive("#project");
-		}
+			if(Top >= 0 && Top <=700){
+				setActive("#home");
+			}
+			if(Top >= 700 && Top <=1200){
+				setActive("#about");
+			}
+			if(Top >= 1200 && Top <=1750){
+				setActive("#skill");
+			}
+			if(Top >= 1750 && Top <=2000){
+				setActive("#socail");
+			}
+			if(Top >= 2000 && Top <=2600){
+				setActive("#educa");
+			}
+			if(Top >= 2600){
+				setActive("#project");
+			}
+		},100)
 	}
 
 	$(".nav-item").hover(function() {
@@ -63,27 +68,27 @@ jQuery(document).ready(function() {
 		switch ($(this).attr("id")) {
 			case "home":
 				// statements_1
-				$("html").animate({scrollTop:($("#homeContent").offset().top -50 )},500);
+				$("html, body").animate({scrollTop:($("#homeContent").offset().top -50 )},500);
 				break;
 			case "about":
 				// statements_1
-				$("html").animate({scrollTop:($("#aboutContent").offset().top -50 )},500);
+				$("html, body").animate({scrollTop:($("#aboutContent").offset().top -50 )},500);
 				break;
 			case "skill":
 				// statements_1
-				$("html").animate({scrollTop:($("#skillContent").offset().top -50 )},500);
+				$("html, body").animate({scrollTop:($("#skillContent").offset().top -50 )},500);
 				break;
 			case "socail":
 				// statements_1
-				$("html").animate({scrollTop:($("#socialContent").offset().top -50 )},500);
+				$("html, body").animate({scrollTop:($("#socialContent").offset().top -50 )},500);
 				break;
 			case "educa":
 				// statements_1
-				$("html").animate({scrollTop:($("#educaContent").offset().top -50 )},500);
+				$("html, body").animate({scrollTop:($("#educaContent").offset().top -50 )},500);
 				break;
 			case "project":
 				// statements_1
-				$("html").animate({scrollTop:($("#projectContent").offset().top -50 )},500);
+				$("html, body").animate({scrollTop:($("#projectContent").offset().top -50 )},500);
 				break;
 			default:
 				// statements_def
@@ -214,12 +219,12 @@ jQuery(document).ready(function() {
 		/* Stuff to do when the mouse enters the element */
 		$(this).css({
 			"transform":"rotateY(180deg)",
-			"transition":"all .5s",
+			"transition":"all 1s",
 			"background-color":"#4A63E7"
 		}).children().each(function(){
 			$(this).css({
 				"transform":"rotateY(180deg)",
-				"transition":"all .5s",
+				"transition":"all 1s",
 				"color":"#fff"
 			}).find(".text").css({
 				"color":"#fff"
@@ -228,12 +233,12 @@ jQuery(document).ready(function() {
 	}, function() {
 		$(this).css({
 			"transform":"rotateY(0deg)",
-			"transition":"all .5s",
+			"transition":"all 1s",
 			"background-color":"#fff"
 		}).children().each(function(){
 			$(this).css({
 				"transform":"rotateY(0deg)",
-				"transition":"all .5s",
+				"transition":"all 1s",
 				"color":"black"
 			}).find(".text").css({
 				"color":"#888"
