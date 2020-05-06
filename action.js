@@ -7,24 +7,60 @@ jQuery(document).ready(function() {
 
 	window.onload = function(){
 		var Top = $(document.documentElement).scrollTop() || $(document.body).scrollTop();
+		console.log(Top);
 
 		if(Top >= 0 && Top <=700){
-			setActive("#home");
-		}
-		if(Top >= 700 && Top <=1200){
+				setActive("#home");
+				$('#homeContent').fadeIn('3000');
+				if(Top >= 200)
+					$('#aboutContent').fadeIn('3000');
+			}
+		if(Top >= 700 && Top <=1100){
 			setActive("#about");
+			if(Top >= 700){
+				$('#homeContent').fadeIn('3000');
+				$('#aboutContent').fadeIn('3000');
+				$('#skillContent').fadeIn('3000');
+			}
 		}
-		if(Top >= 1200 && Top <=1750){
+		if(Top >= 1100 && Top <=1750){
 			setActive("#skill");
+			if(Top >= 1100){
+				$('#homeContent').fadeIn('3000');
+				$('#aboutContent').fadeIn('3000');
+				$('#skillContent').fadeIn('3000');
+				$('#socialContent').fadeIn('3000');
+			}
 		}
 		if(Top >= 1750 && Top <=2000){
 			setActive("#socail");
+			if(Top >= 1425){
+				$('#homeContent').fadeIn('3000');
+				$('#aboutContent').fadeIn('3000');
+				$('#skillContent').fadeIn('3000');
+				$('#socialContent').fadeIn('3000');
+				$('#educaContent').fadeIn('3000');
+			}
 		}
-		if(Top >= 2000 && Top <=2600){
+		if(Top >= 2000 && Top <=2500){
 			setActive("#educa");
+			if(Top >= 1800){
+				$('#homeContent').fadeIn('3000');
+				$('#aboutContent').fadeIn('3000');
+				$('#skillContent').fadeIn('3000');
+				$('#socialContent').fadeIn('3000');
+				$('#educaContent').fadeIn('3000');
+				$('#projectContent').fadeIn('3000');
+			}
 		}
-		if(Top >= 2600){
+		if(Top >= 2500){
 			setActive("#project");
+			$('#homeContent').fadeIn('3000');
+			$('#aboutContent').fadeIn('3000');
+			$('#skillContent').fadeIn('3000');
+			$('#socialContent').fadeIn('3000');
+			$('#educaContent').fadeIn('3000');
+			$('#projectContent').fadeIn('3000');
 		}
 	}
 	
@@ -36,18 +72,29 @@ jQuery(document).ready(function() {
 
 			if(Top >= 0 && Top <=700){
 				setActive("#home");
+				$('#homeContent').fadeIn('3000');
+				if(Top >= 200)
+					$('#aboutContent').fadeIn('3000');
 			}
-			if(Top >= 700 && Top <=1200){
+			if(Top >= 700 && Top <=1100){
 				setActive("#about");
+				if(Top >= 850)
+					$('#skillContent').fadeIn('3000');
 			}
-			if(Top >= 1200 && Top <=1750){
+			if(Top >= 1100 && Top <=1750){
 				setActive("#skill");
+				if(Top >= 1225)
+					$('#socialContent').fadeIn('3000');
 			}
 			if(Top >= 1750 && Top <=2000){
 				setActive("#socail");
+				if(Top >= 1425)
+					$('#educaContent').fadeIn('3000');
 			}
 			if(Top >= 2000 && Top <=2600){
 				setActive("#educa");
+				if(Top >= 2050)
+					$('#projectContent').fadeIn('3000');
 			}
 			if(Top >= 2600){
 				setActive("#project");
