@@ -12,8 +12,9 @@ jQuery(document).ready(function() {
 		if(Top >= 0 && Top <=700){
 				setActive("#home");
 				$('#homeContent').fadeIn('3000');
-				if(Top >= 200)
+				if(Top >= 200){
 					$('#aboutContent').fadeIn('3000');
+				}
 			}
 		if(Top >= 700 && Top <=1100){
 			setActive("#about");
@@ -53,13 +54,23 @@ jQuery(document).ready(function() {
 				$('#projectContent').fadeIn('3000');
 			}
 		}
-		if(Top >= 2500){
+		if(Top >= 2500 && Top <=2800){
+			setActive("#work");
+			$('#homeContent').fadeIn('3000');
+			$('#aboutContent').fadeIn('3000');
+			$('#skillContent').fadeIn('3000');
+			$('#socialContent').fadeIn('3000');
+			$('#educaContent').fadeIn('3000');
+			$('#workContent').fadeIn('3000');
+		}
+		if(Top >= 2800 ){
 			setActive("#project");
 			$('#homeContent').fadeIn('3000');
 			$('#aboutContent').fadeIn('3000');
 			$('#skillContent').fadeIn('3000');
 			$('#socialContent').fadeIn('3000');
 			$('#educaContent').fadeIn('3000');
+			$('#workContent').fadeIn('3000');
 			$('#projectContent').fadeIn('3000');
 		}
 	}
@@ -73,8 +84,9 @@ jQuery(document).ready(function() {
 			if(Top >= 0 && Top <=700){
 				setActive("#home");
 				$('#homeContent').fadeIn('3000');
-				if(Top >= 200)
+				if(Top >= 200){
 					$('#aboutContent').fadeIn('3000');
+				}
 			}
 			if(Top >= 700 && Top <=1100){
 				setActive("#about");
@@ -94,9 +106,14 @@ jQuery(document).ready(function() {
 			if(Top >= 2000 && Top <=2600){
 				setActive("#educa");
 				if(Top >= 2050)
+					$('#workContent').fadeIn('3000');
+			}
+			if(Top >= 2600 && Top <=3000){
+				setActive("#work");
+				if(Top >= 2700)
 					$('#projectContent').fadeIn('3000');
 			}
-			if(Top >= 2600){
+			if( Top >= 3000){
 				setActive("#project");
 			}
 		},100)
@@ -132,6 +149,10 @@ jQuery(document).ready(function() {
 			case "educa":
 				// statements_1
 				$("html, body").animate({scrollTop:($("#educaContent").offset().top -50 )},500);
+				break;
+			case "work":
+				// statements_1
+				$("html, body").animate({scrollTop:($("#workContent").offset().top -50 )},500);
 				break;
 			case "project":
 				// statements_1
@@ -265,30 +286,24 @@ jQuery(document).ready(function() {
 	$(".card").hover(function() {
 		/* Stuff to do when the mouse enters the element */
 		$(this).css({
-			"transform":"rotateY(180deg)",
-			"transition":"all 1s",
-			"background-color":"#4A63E7"
+			"background-color":"#FF5959"
 		}).children().each(function(){
 			$(this).css({
-				"transform":"rotateY(180deg)",
-				"transition":"all 1s",
 				"color":"#fff"
-			}).find(".text").css({
+			}).find(".text, .iconfont").css({
 				"color":"#fff"
 			})
 		})
 	}, function() {
 		$(this).css({
-			"transform":"rotateY(0deg)",
-			"transition":"all 1s",
-			"background-color":"#fff"
+			"background-color":""
 		}).children().each(function(){
 			$(this).css({
-				"transform":"rotateY(0deg)",
-				"transition":"all 1s",
 				"color":"black"
 			}).find(".text").css({
 				"color":"#888"
+			}).prevAll(".iconfont").css({
+				"color":"#FF5959"
 			})
 		})
 	});

@@ -1,7 +1,7 @@
 body{
 	background-color: #F6F7FF;
 	font-family: "Poppins", sans-serif;
-	min-height: 3200px;
+	min-height: 3600px;
 }
 
 .disappear{
@@ -30,6 +30,8 @@ body{
 .text{
 	color: #888;
 	margin-bottom: 20px;
+	padding-left: 0;
+    padding-right: 0;
 }
 
 .headline:after{
@@ -97,6 +99,10 @@ body{
 	cursor: pointer;
 }
 
+.nav-item > span {
+	margin-right: 10px;
+}
+
 .content1{
 	box-sizing: border-box;
 	position: absolute;
@@ -112,13 +118,17 @@ body{
 	height: 90px;
 }
 
+#homeContent{
+	margin-top: 50px;
+}
+
 .detail2{
 	box-sizing: border-box;
-	margin-top: 50px;
 	border-radius: 20px;
 	color:#fff;
 	background-image: url('./img/back7.jpg');
-	background-size: 100% 100%;
+	background-size: 100% 100%;	
+	z-index: 2;
 }
 
 .content2:after{
@@ -130,14 +140,21 @@ body{
 	left:0px;	
 	background-color: #4A63E7;
 	opacity: 0.9;
-	z-index: -10;
+	z-index: 3;
 	border-radius: 20px;
 }
 
 .content2{
-	position: relative;
-	padding: 100px 70px 100px 70px;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 620px;
+    padding: 0 50px;
     z-index: 2;
+}
+
+.content2 > .row{
+	z-index: 4;
 }
 
 .content2-item{
@@ -223,6 +240,19 @@ body{
 	position: relative;
 }
 
+.content5 > .row {
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.content5 > .row > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 30px;
+}
+
 .detail6{
 	margin-top: 50px;
 	background-color: #fff;
@@ -246,7 +276,11 @@ body{
 }
 
 .card{
-	height:275px;
+	height:240px;
+}
+
+a:hover, a:visited, a:active, a:link{
+	text-decoration: none;
 }
 
 .detail7{
@@ -304,4 +338,68 @@ body{
     padding: 4.5px;
     top: 15%;
     right: -19px;
+}
+
+.caption{
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail8{
+	width: 100%;
+	height: 100%;
+	margin-top: 50px;
+	background-color: #4A63E7;
+	border-radius: 20px;	
+	color:#fff;
+}
+
+.content8{
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	padding: 50px;
+}
+
+.work-item{
+}
+
+.work-item-location{
+	font-size: 16px;
+	font-weight: bold;
+	display: flex;
+    align-items: center;
+}
+
+.work-item-time{
+	display: flex;
+	justify-content: flex-end;
+}
+
+.work-item-subject-list-item{
+	display: flex;
+	flex-direction: row;
+}
+
+.work-item-subject-list-icon{
+	display: flex;
+}
+
+.work-item-subject-list-content{
+
+}
+
+.work-item-subject-list-content-title{
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.work-item-subject-list-content-poste{
+	
+}
+
+.work-item-subject-list-content-desc{
+	
 }
