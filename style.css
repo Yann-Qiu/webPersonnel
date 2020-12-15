@@ -302,7 +302,7 @@ a:hover, a:visited, a:active, a:link{
 .timeline-line{
 	position: absolute;
     top: 130px;
-    left: 217.5px;
+    left: 225px;
     bottom: 60px;
     width: 1.5px;
     background: #FF5959;
